@@ -100,6 +100,9 @@ their practical uses.
 Hello, programming!
 Here we go!
 ```
+
+[Exercise 1.1.cpp](1.1.cpp)
+
 > 2. Expanding on what you have learned, write a program 
 that lists the instructions for a computer to find the 
 upstairs bathroom, discussed in §2.1. Can you think of 
@@ -115,6 +118,8 @@ use more than a page. For the benefit of the reader,
 you may add a short description of the layout of the 
 house you are imagining.
 
+[Exercise 1.2.cpp](1.2.cpp)
+
 > 3. Write a description of how to get from the front 
 door of your dorm room, apartment, house, whatever, 
 to the door of your classroom (assuming you are
@@ -123,6 +128,8 @@ target). Have a friend try to follow the instructions
 and annotate them with improvements as he or she goes 
 along. To keep friends, it may be a good idea to “field 
 test” those instructions before giving them to a friend.
+
+None
 
 > 4. Find a good cookbook. Read the instructions for 
 baking blueberry muffins (if you are in a country
@@ -155,6 +162,8 @@ What does preheating do? What do you mean by “oven”?)
 
 > - Now bake some muffins and enjoy your results.
 
+None
+
 > 5. Write a definition for each of the terms from 
 “Terms.” First try to see if you can do it without 
 looking at the chapter (not likely), then look through
@@ -171,3 +180,5 @@ as detailed as you think reasonable. Often, an example
 after the main definition will be helpful. You may like 
 to store the definitions in a file so that you can add to 
 them from the “Terms” sections of later chapters.
+
+None

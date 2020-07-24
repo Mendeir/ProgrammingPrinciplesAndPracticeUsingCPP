@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter02\1.1.cpp" />
+    <ClCompile Include="Chapter02\1.2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Chapter02\README.md" />
