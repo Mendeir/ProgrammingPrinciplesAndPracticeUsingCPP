@@ -1,5 +1,5 @@
-# Answers to Review and Drills
-Note: All non-programming exercises will be listed here.
+# Answers to Review, Drills and Exercises
+Note: All non-programming questions will be listed here.
 
 ## Drills
 
@@ -39,53 +39,53 @@ try each to see what happens when you try to compile and run those versions.
 **Answer:** To be familiar with basic programming tools and be able to try 
 your own programming environment. 
 
-2. Name the four parts of a function.
+> 2. Name the four parts of a function.
 
 **Answer:** A function has a **return type**, **function name**, **parameter list**,
 and a **fucntion body**.
 
-3. Name a function that must appear in every C++ program.
+> 3. Name a function that must appear in every C++ program.
 
 **Answer:** int main() {} must appear in every c++ program as this will be
 the basis of the compiler on where to start executing.
 
-4. In the “Hello, World!” program, what is the purpose of the line 
+> 4. In the “Hello, World!” program, what is the purpose of the line 
 return 0;?
 
 **Answer:** Its purpose is to inform the programmer whether program has been
 successfully executed or not
 
-5. What is the purpose of the compiler?
+> 5. What is the purpose of the compiler?
 
 **Answer:** Its purpose is to translate source code into object code.
 
-6. What is the purpose of the #include directive?
+> 6. What is the purpose of the #include directive?
 
 **Answer:** Its purpose is to instruct the computer to make available the 
 facilities from a given file.
 
-7. What does a .h suffix at the end of a file name signify in C++?
+> 7. What does a .h suffix at the end of a file name signify in C++?
 
 **Answer:** .h means that the file name is a header file
 
-8. What does the linker do for your program?
+> 8. What does the linker do for your program?
 
 **Answer:** It combines object files and libraries into an executable file.
 
-9. What is the difference between a source file and an object file?
+> 9. What is the difference between a source file and an object file?
 
 **Answer:** A source file is a file containing the source code - produced by
 the programmer and an ojbect file is a file containing the 
 object code - output from compiler.
 
-10. What is an IDE and what does it do for you?
+> 10. What is an IDE and what does it do for you?
 
 **Answer:** IDE's are usually an "All in one package" in which will do all 
 the compilation and linking for you with just a click of a button. It does
 automatic compilation and linking, syntax highlight, and many more depending
 on the IDE that you will be using.
 
-11. If you understand everything in the textbook, why is it necessary
+> 11. If you understand everything in the textbook, why is it necessary
 to practice? 
 
 **Answer:** Practicing is neccessary because with theory alone you can't
