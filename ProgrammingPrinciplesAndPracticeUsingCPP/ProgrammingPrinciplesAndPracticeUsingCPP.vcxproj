@@ -22,7 +22,7 @@
     <None Include="Chapter03\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter03\TryThis1.cpp" />
+    <ClCompile Include="Chapter03\TryThisRepeatedWords.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
