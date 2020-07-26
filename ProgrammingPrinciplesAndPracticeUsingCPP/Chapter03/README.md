@@ -145,3 +145,71 @@ another is safe or unsafe.
 **Answer:** Usually bool or char values into an integer is safe. While
 double to any integer is unsafe, integer to any data type smaller to it is
 also unsafe. 
+
+## Exercises
+Note: Since some exercises questions are too long, it will be shortened.
+
+> 1. If you haven’t done so already, do the Try this exercises from this 
+chapter.
+
+> 2. Write a program in C++ that converts from miles to kilometers.
+
+[Exercise 2.cpp](Exercise02.cpp)
+
+> 3. Write a program that doesn’t do anything, but declares a number
+of variables with legal and illegal names (such as int double = 0;), 
+so that you can see how the compiler reacts.
+
+[Exercise 3.cpp](Exercise03.cpp)
+
+> 4. Write a program that prompts the user to enter two integer values. 
+Write your program to determine the smaller, larger, sum, difference, product, 
+and ratio of these values and report them to the user.
+
+[Exercise 4.cpp](Exercise04.cpp)
+
+> 5. Modify the program above to ask the user to enter floating-point values 
+and store them in double variables.
+
+[Exercise 5.cpp](Exercise05.cpp)
+
+> 6. Write a program that prompts the user to enter three integer values, and 
+then outputs the values in numerical sequence separated by commas.
+
+[Exercise 6.cpp](Exercise06.cpp)
+
+> 7. Do exercise 6, but with three string values. 
+
+[Exercise 7.cpp](Exercise07.cpp)
+
+> 8. Write a program to test an integer value to determine if it is odd or even.
+
+[Exercise 8.cpp](Exercise08.cpp)
+
+> 9. Write a program that converts spelled-out numbers such as “zero” and “two” 
+into digits, such as 0 and 2. 
+
+[Exercise 9.cpp](Exercise09.cpp)
+
+> 10. Write a program that takes an operation followed by two operands and outputs 
+the result. For example:
+```c++
++ 100 3.14
+* 4 5
+```
+
+[Exercise 10.cpp](Exercise10.cpp)
+
+> 11. Write a program that prompts the user to enter some number of pennies (1-cent coins),
+nickels (5-cent coins), dimes (10-cent coins), quarters (25-cent coins), half dollars 
+(50-cent coins), and one-dollar coins (100-cent coins). 
+```
+You have 23 pennies.
+You have 17 nickels.
+You have 14 dimes.
+You have 7 quarters.
+You have 3 half dollars.
+The value of all of your coins is 573 cents.
+```
+
+[Exercise 11.cpp](Exercise11.cpp)
