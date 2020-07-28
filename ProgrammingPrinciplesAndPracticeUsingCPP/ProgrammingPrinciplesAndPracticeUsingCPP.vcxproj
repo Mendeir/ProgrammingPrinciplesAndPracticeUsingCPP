@@ -19,10 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Chapter03\README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Chapter03\Exercise11.cpp" />
+    <None Include="Chapter04\README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
