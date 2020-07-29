@@ -21,6 +21,9 @@
   <ItemGroup>
     <None Include="Chapter04\README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Chapter04\TryThisMoneyConverter2.0.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
