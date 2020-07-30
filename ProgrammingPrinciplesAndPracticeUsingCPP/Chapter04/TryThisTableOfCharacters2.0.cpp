@@ -9,5 +9,6 @@ int main ()
 	//display uppercase characters
 	for (int counter { 65 }; counter <= 90; ++counter)
 		cout << char (counter) << '\t' << counter << endl;
+
 	return 0;
 }

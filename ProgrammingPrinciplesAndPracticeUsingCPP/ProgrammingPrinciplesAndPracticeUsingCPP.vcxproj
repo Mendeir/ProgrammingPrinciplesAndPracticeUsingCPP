@@ -22,7 +22,7 @@
     <None Include="Chapter04\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter04\TryThisTableOfCharacters2.0.cpp" />
+    <ClCompile Include="Chapter04\TryThisBleep.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
