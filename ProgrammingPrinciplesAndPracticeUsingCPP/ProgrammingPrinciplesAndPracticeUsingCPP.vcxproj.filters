@@ -18,7 +18,7 @@
     <None Include="Chapter04\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter04\TryThisMoneyConverter2.0.cpp">
+    <ClCompile Include="Chapter04\TryThisTableOfCharacters2.0.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
