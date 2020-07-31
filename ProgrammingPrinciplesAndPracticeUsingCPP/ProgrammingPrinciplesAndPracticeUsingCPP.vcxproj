@@ -22,7 +22,7 @@
     <None Include="Chapter04\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter04\TryThisBleep.cpp" />
+    <ClCompile Include="Chapter04\Drill6-11.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
