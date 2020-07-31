@@ -14,9 +14,10 @@ int main ()
 
     // compute median temperature:
     sort (temps);                                     // sort temperatures
+    const int middle_element = temps.size () / 2;
     if (temps.size () % 2 != 0)
-        cout << "Median temperature: " << temps [temps.size () / 2] << '\n';
+        cout << "Median temperature: " << temps [middle_element] << '\n';
     else
-        cout << "Median temperature: " << (temps [temps.size () / 2] + temps [temps.size() / 2 - 1]) / 2 << '\n';
+        cout << "Median temperature: " << (temps [middle_element] + temps [middle_element - 1]) / 2 << '\n'; //formula for median if elements are even
     
 }
