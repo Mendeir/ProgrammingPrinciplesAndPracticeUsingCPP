@@ -174,3 +174,79 @@ using the index of the element.
 
 **Answer:** In order to sort a vector we need to use the sort(vector_name) 
 algorithm which will sort the vector in ascending order.
+
+## Exercises
+Note: Since some exercises questions are too long, it will be shortened.
+
+> 1. If you haven’t already, do the Try this exercises from this chapter.
+
+> 2. Fix the program in §4.6.3 so that it always prints out a median. 
+
+> 3. Read a sequence of double values into a vector. Compute and print the 
+total distance (the sum of all distances). Find and print the smallest 
+and greatest distance between two neighboring cities. Find and print the 
+mean distance between two neighboring cities.
+
+> 4. Write a program to play a numbers guessing game. 
+
+> 5. Write a program that performs as a very simple calculator.
+
+> 6. Make a vector holding the ten string values "zero", "one", . . . 
+"nine". Use that in a program that converts a digit to its corresponding 
+spelled-out value; e.g., the input 7 gives the output seven. Have the same 
+program, using the same input loop, convert spelled-out numbers into their 
+digit form; e.g., the input seven gives the output 7.
+
+> 7. Modify the “mini calculator” from exercise 5 to accept (just)
+single-digit numbers written as either digits or spelled out.
+
+> 8.Write a program to calculate how many squares are required to give the 
+inventor at least 1000 grains of rice, at least 1,000,000 grains, and at 
+least 1,000,000,000 grains.  
+
+> 9. Try to calculate the number of rice grains that the inventor asked for in 
+exercise 8 above. What is the largest number of squares for which you can calculate 
+the exact number of grains (using an int)? What is the largest number of squares 
+for which you can calculate the approximate number of grains (using a double)?
+
+> 10. Write a program that plays the game “Rock, Paper, Scissors.” , Use a switch-statement 
+to solve this exercise. Also, the machine should give random answers ors randomly).
+
+> 11. Create a program to find all the prime numbers between 1 and 100. 
+One way to do this is to write a function that will check if a number is prime 
+using a vector of primes in order Then write a loop that goes from 1 to 100, checks 
+each number to see if it is a prime, and stores each prime found in a vector. 
+Write another loop that lists the primes you found. You might check your result by 
+comparing your vector of prime numbers with primes. Consider 2 the first prime.
+
+> 12. Modify the program described in the previous exercise to take an input value max 
+and then find all prime numbers from 1 to max.
+
+> 13. Create a program to find all the prime numbers between 1 and 100. There is a 
+classic method for doing this, called the “Sieve of Eratosthenes.”
+Write your program using this method.
+
+> 14. Modify the program described in the previous exercise to take an input value max 
+and then find all prime numbers from 1 to max.
+
+> 15. Write a program that takes an input value n and then finds the first n primes.
+
+> 16. Create a program that finds the mode of a set of positive integers.
+
+> 17. Write a program that finds the min, max, and mode of a sequence of strings.
+
+> 18. Write a program to solve quadratic equations. A quadratic equation is of the form
+```
+ax2 + bx + c = 0
+```
+
+> 19. Write a program where you first enter a set of name-and-value pairs, such as Joe 17 and Barbara 22. 
+For each pair, add the name to a vector called names and the number to a vector called scores
+Terminate input with NoName 0. Check that each name is unique and terminate with an error message if a name is 
+entered twice. Write out all the (name,score) pairs, one per line.
+
+> 20. Modify the program from exercise 19 so that when you enter a name, the program will output the 
+corresponding score or name not found.
+
+> 21. Modify the program from exercise 19 so that when you enter an integer, the program will output all the 
+names with that score or score not found.
