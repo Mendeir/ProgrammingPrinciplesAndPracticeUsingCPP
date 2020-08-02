@@ -18,10 +18,7 @@
     <None Include="Chapter04\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter04\Exercise06.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TestingGrounds.cpp">
+    <ClCompile Include="Chapter04\Exercise07.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
