@@ -182,14 +182,22 @@ Note: Since some exercises questions are too long, it will be shortened.
 
 > 2. Fix the program in §4.6.3 so that it always prints out a median. 
 
+[Exercise 2.cpp](Exercise02.cpp)
+
 > 3. Read a sequence of double values into a vector. Compute and print the 
 total distance (the sum of all distances). Find and print the smallest 
 and greatest distance between two neighboring cities. Find and print the 
 mean distance between two neighboring cities.
 
+[Exercise 3.cpp](Exercise03.cpp)
+
 > 4. Write a program to play a numbers guessing game. 
 
+[Exercise 4.cpp](Exercise04.cpp)
+
 > 5. Write a program that performs as a very simple calculator.
+
+[Exercise 5.cpp](Exercise02.cpp)
 
 > 6. Make a vector holding the ten string values "zero", "one", . . . 
 "nine". Use that in a program that converts a digit to its corresponding 
@@ -197,20 +205,30 @@ spelled-out value; e.g., the input 7 gives the output seven. Have the same
 program, using the same input loop, convert spelled-out numbers into their 
 digit form; e.g., the input seven gives the output 7.
 
+[Exercise 2.cpp](Exercise02.cpp)
+
 > 7. Modify the “mini calculator” from exercise 5 to accept (just)
 single-digit numbers written as either digits or spelled out.
+
+[Exercise 2.cpp](Exercise02.cpp)
 
 > 8.Write a program to calculate how many squares are required to give the 
 inventor at least 1000 grains of rice, at least 1,000,000 grains, and at 
 least 1,000,000,000 grains.  
+
+[Exercise 2.cpp](Exercise02.cpp)
 
 > 9. Try to calculate the number of rice grains that the inventor asked for in 
 exercise 8 above. What is the largest number of squares for which you can calculate 
 the exact number of grains (using an int)? What is the largest number of squares 
 for which you can calculate the approximate number of grains (using a double)?
 
+[Exercise 2.cpp](Exercise02.cpp)
+
 > 10. Write a program that plays the game “Rock, Paper, Scissors.” , Use a switch-statement 
 to solve this exercise. Also, the machine should give random answers ors randomly).
+
+[Exercise 2.cpp](Exercise02.cpp)
 
 > 11. Create a program to find all the prime numbers between 1 and 100. 
 One way to do this is to write a function that will check if a number is prime 
