@@ -22,7 +22,7 @@
     <None Include="Chapter04\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter04\Exercise19.cpp" />
+    <ClCompile Include="Chapter05\TryThisSyntaxErrors.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
