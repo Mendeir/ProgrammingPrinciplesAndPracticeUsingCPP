@@ -1,5 +1,4 @@
-#include "std_lib_facilities.h"
-
+#include <iostream>
 int main ()
 {
 	int s1 = area (7;           // error: ) missing
