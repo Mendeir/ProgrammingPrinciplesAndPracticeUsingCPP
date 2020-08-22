@@ -16,9 +16,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Chapter04\README.md" />
+    <None Include="Chapter05\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter05\TryThisBadInput.cpp">
+    <ClCompile Include="Chapter05\Exercise02.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
