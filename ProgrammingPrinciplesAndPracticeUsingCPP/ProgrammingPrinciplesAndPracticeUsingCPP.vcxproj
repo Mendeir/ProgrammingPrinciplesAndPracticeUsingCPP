@@ -20,10 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Chapter04\README.md" />
-    <None Include="Chapter05\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter05\Exercise02.cpp" />
+    <ClCompile Include="Chapter05\TryThisBadInput.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
