@@ -15,4 +15,4 @@ catch (std::runtime_error &e)
 {
 	std::cerr << "Runtime error: " << e.what () << '\n';
 	return 1;
-}
+}		
