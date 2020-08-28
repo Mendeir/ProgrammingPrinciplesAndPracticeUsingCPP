@@ -112,12 +112,12 @@ void ctof (double temp)
 	constexpr double absoluteZeroF = -459.67;
 
 	if (temp < absoluteZeroC)
-		error ("Pre-condition ctok ()");
+		error ("Pre-condition ctof ()");
 
 	double f = (temp * 9/5) + 32;
 
 	if (f < absoluteZeroF)
-		error ("Post-condition ctok ()");
+		error ("Post-condition ctof ()");
 
 	std::cout << "The temperature from " << temp << "C is " << f << "F\n";
 }
@@ -131,12 +131,12 @@ void ftoc (double temp)
 	constexpr double absoluteZeroF = -459.67;
 
 	if (temp < absoluteZeroF)
-		error ("Pre-condition ktoc ()");
+		error ("Pre-condition ftoc ()");
 
 	double c = (temp - 32) * 5/9;
 
 	if (c < absoluteZeroC)
-		error ("Post-condition ktoc ()");
+		error ("Post-condition ftoc ()");
 
 	std::cout << "The temperature from " << temp << "F is " << c << "C\n";
 }
