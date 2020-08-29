@@ -61,10 +61,10 @@ void getUserInputs (std::vector<int> &userInputs)
 
 	while (std::cin >> inputs)
 	{
-		if (inputs == '|')	
+		if (inputs == '|')
 			return;
 
-		if (std::cin.fail () || ceil(inputs) - inputs)
+		if (std::cin.fail () || ceil (inputs) - inputs)
 		{
 			std::cin.clear ();
 			std::cin.ignore (std::numeric_limits<std::streamsize>::max (), '\n');
@@ -85,7 +85,7 @@ void addFirstNVector (const std::vector<int> givenVector, size_t n)
 		error ("Numbers from the vector is not enough to add the given n numbers.");
 
 	int sum = 0;
-	int max = givenVector[0];
+	int max = givenVector [0];
 
 
 	std::cout << "The sum of first " << n << " numbers ( ";

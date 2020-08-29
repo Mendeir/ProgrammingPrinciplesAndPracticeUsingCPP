@@ -4,8 +4,10 @@
 #include <cmath>
 
 int numberOfValuesInput ();
-void getUserInputs (std::vector<int> &userInputs);
-void addFirstNVector (const std::vector<int> givenVector, size_t n);
+void getUserInputs (std::vector<double> &userInputs);
+void addFirstNVector (const std::vector<double> givenVector, size_t n);
+void subtractAdjacent (const std::vector <double> givenVector, size_t n, std::vector<double> &subtractedList);
+void displaySubtractedList (const std::vector <double> givenVector, size_t n, std::vector<double> &subtractedList);
 void error (std::string s);
 void badInputError (const std::string s);
 
@@ -14,10 +16,13 @@ int main ()
 	try
 	{
 		size_t numberOfValues = numberOfValuesInput ();
-		std::vector<int> userIntInputs;
+		std::vector<double> userIntInputs;
+		std::vector<double> subtractedList;
 
 		getUserInputs (userIntInputs);
 		addFirstNVector (userIntInputs, numberOfValues);
+		subtractAdjacent (userIntInputs, numberOfValues, subtractedList);
+		displaySubtractedList (userIntInputs, numberOfValues, subtractedList);
 	}
 	catch (std::runtime_error &s)
 	{
@@ -33,7 +38,7 @@ int numberOfValuesInput ()
 {
 	while (true)
 	{
-		std::cout << "Enter the number of first values you want to add: ";
+		std::cout << "Enter the number of first values you want to add and subtract adjacent: ";
 
 		size_t numberOfValues = 0;
 		std::cin >> numberOfValues;
@@ -50,25 +55,25 @@ int numberOfValuesInput ()
 	}
 }
 
-void getUserInputs (std::vector<int> &userInputs)
+void getUserInputs (std::vector<double> &userInputs)
 //Get integer inputs from the user and put those inputs into a integer vector
-//Post-condition: The vector must contain only integers.
+//Post-condition: The vector must contain only double.
 //Known unhandled errors: Integer overflow when given the maximum limit.
 {
-	float inputs = 0;
+	double inputs = 0;
 
 	std::cout << "Enter some integers (enter '|' to stop): ";
 
 	while (std::cin >> inputs)
 	{
-		if (inputs == '|')	
+		if (inputs == '|')
 			return;
 
-		if (std::cin.fail () || ceil(inputs) - inputs)
+		if (std::cin.fail ())
 		{
 			std::cin.clear ();
 			std::cin.ignore (std::numeric_limits<std::streamsize>::max (), '\n');
-			badInputError ("An input has been detected to be non-integer type.");;
+			badInputError ("An input has been detected to be non-numeric type.");;
 			std::cout << '\n';
 		}
 		else
@@ -76,7 +81,7 @@ void getUserInputs (std::vector<int> &userInputs)
 	}
 }
 
-void addFirstNVector (const std::vector<int> givenVector, size_t n)
+void addFirstNVector (const std::vector<double> givenVector, size_t n)
 //Adds and display the first n numbers and its sum 
 //Pre-condition: Given vector must be larger or equal to n
 //Post-condition: Sum must not overflow
@@ -84,8 +89,8 @@ void addFirstNVector (const std::vector<int> givenVector, size_t n)
 	if (givenVector.size () < n)
 		error ("Numbers from the vector is not enough to add the given n numbers.");
 
-	int sum = 0;
-	int max = givenVector[0];
+	double sum = 0;
+	double max = givenVector [0];
 
 
 	std::cout << "The sum of first " << n << " numbers ( ";
@@ -105,6 +110,38 @@ void addFirstNVector (const std::vector<int> givenVector, size_t n)
 
 	std::cout << " ) is: " << sum << '\n';
 
+}
+
+void subtractAdjacent (const std::vector <double> givenVector, size_t n, std::vector<double> &subtractedList)
+//Subtracts n-1 adjacent values and puts it in a vector
+//Pre-condiition: Given vector must be larger to n-1 and n > 1;
+{
+	if (givenVector.size () < n || n <= 1)
+		error ("Numbers from the vector is not enough to subtract the given n numbers.");
+
+	double difference = 0;
+	
+	for (size_t counter = 0; counter < n - 1; ++counter)
+	{
+		difference = givenVector [counter] - givenVector [counter + 1];
+		subtractedList.push_back (difference);
+	}
+}
+
+void displaySubtractedList (const std::vector <double> givenVector, size_t n, std::vector<double> &subtractedList)
+//Displays the subtracted list vector and the numbers that has been subtracted
+{
+	std::cout << "The difference of adjacent values with given numbers ( ";
+	for (size_t counter = 0; counter < n; ++counter)
+	{
+		std::cout << givenVector [counter];
+		if (counter != n - 1)
+			std::cout << ", ";
+	}
+	std::cout << " ) is: ";
+	
+	for (double counter : subtractedList)
+		std::cout << counter << " ";
 }
 
 void error (std::string s)
