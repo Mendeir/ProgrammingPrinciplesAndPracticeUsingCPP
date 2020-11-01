@@ -7,13 +7,26 @@ class Token
 		double value;
 };
 
-Token get_token ();
+class Token_stream
+{
+	private:
+		//impelementation details
+		bool full { false };		//Check if there is a token in the buffer
+		Token buffer;				//Keep a Token putback using putback()
+
+	public:
+		//user interface
+		Token get ();				//get a Token (get())
+		void putback (Token t);		//Put a token back
+};
+
+
+Token_stream ts;
 vector<Token> tok;
 
 //Functions to build grammar rules for an expression
-Token get_token ();		//reads characters and compose tokens and uses cin
 double expression ();		//deals with + and -   calls term() ang get_token() 
-double term ();			//deals with *, / and %		calls primary() and get_token()
+double term ();				//deals with *, / and %		calls primary() and get_token()
 double primary ();			//deals with number and parentheses		calls expression() and get_token()
 
 
@@ -21,8 +34,19 @@ int main ()
 {
 	try
 	{
+		double val = 0;
 		while (cin)
-			cout << expression () << '\n';
+		{
+			Token t = ts.get ();
+
+			if (t.kind == 'q')
+				break;
+			if (t.kind == ';')
+				cout << "= " << val << '\n';
+			else
+				ts.putback (t);
+			val = expression ();
+		}
 		keep_window_open ();
 	}
 	catch (exception &e)
@@ -50,23 +74,24 @@ Expression:
 double expression ()
 {
 	double left = term ();				//read and evaluate a term
-	Token t = get_token ();				//get the next token
+	Token t = ts.get ();				//get the next token from the token stream
 	while (true)
 	{
-		switch (t.kind)						//see which kind of token it is
+		switch (t.kind)					//see which kind of token it is
 		{
-			case '+':						//evaluate Term and add
+			case '+':					//evaluate Term and add
 				left += term ();
-				t = get_token ();
+				t = ts.get ();
 				break;
 
-			case '-':						//evaluate Term and subtract
+			case '-':					//evaluate Term and subtract
 				left -= term ();
-				t = get_token ();
+				t = ts.get ();
 				break;
 
-			default:						//no more + or - return the answer;
-				return left;
+			default:						
+				ts.putback (t);			//put t back into the token stream
+				return left;			//no more + or - return the answer
 		}
 	}
 }
@@ -81,14 +106,14 @@ Term:
 double term ()
 {
 	double left = primary ();
-	Token t = get_token ();
+	Token t = ts.get ();				//get the next token from the token stream
 	while (true)
 	{
 		switch (t.kind)
 		{
 			case '*':
 				left *= primary ();
-				t = get_token ();
+				t = ts.get ();
 				break;
 			
 			case '/':
@@ -99,13 +124,13 @@ double term ()
 					error ("Divide by zero");
 
 				left /= d;
-				t = get_token ();
+				t = ts.get ();
 				break;
 			}
 
 			default:
+				ts.putback (t);
 				return left;
-
 		}
 	}
 }
@@ -117,15 +142,15 @@ Primary:
 
 */
 
-double Primary ()
+double primary ()
 {
-	Token t = get_token ();
+	Token t = ts.get ();
 	switch (t.kind)
 	{
 		case '(':									//handle '(' expression ')'
 		{
 			double d = expression ();
-			t = get_token ();
+			t = ts.get ();
 			if (t.kind != ')')
 				error (" ')' expected");
 				return d;
@@ -138,3 +163,67 @@ double Primary ()
 	}
 }
 
+
+//Class Token stream functions
+
+/*
+	Pre-condition: Check if there is no token in the buffer
+*/
+void Token_stream::putback (Token t)
+{
+
+	if (full)
+		error ("putback() into a full buffer");
+
+	buffer = t;			//copy t to buffer
+	full = true;		//buffer is now full
+}
+
+//Read tokens
+Token Token_stream::get ()
+{
+	if (full)				//check if there is a token
+	{
+		full = false;		//remove token from the buffer
+		return buffer;		
+	}
+
+	char ch;
+	cin >> ch;				
+
+	switch (ch)
+	{
+		case ';':			//for print
+		case 'q':			//for quit
+		case '(':
+		case ')':
+		case '+':
+		case '-':
+		case '*':
+		case '/':
+			return Token { ch };
+
+		case '.':
+		case '0': 
+		case '1':
+		case '2':
+		case '3':
+		case '4':
+		case '5':
+		case '6':
+		case '7':
+		case '8':
+		case '9':
+		{
+			cin.putback (ch);				//put digit back into the input stream
+			double val;
+			cin >> val;						//read floating point number
+			return Token { '8', val };		//let '8' represent a number
+		}
+
+		default:
+			error ("Bad Token");
+	}
+
+
+}
