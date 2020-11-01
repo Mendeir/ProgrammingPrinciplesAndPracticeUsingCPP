@@ -34,17 +34,91 @@ double expression ()
 {
 	double left = term ();				//read and evaluate a term
 	Token t = get_token ();				//get the next token
-	switch (t.kind)						//see which kind of token it is
+	while (true)
 	{
-		case '+':						//read and evaluate an expression, then do an addition
-			return left + expression ();
+		switch (t.kind)						//see which kind of token it is
+		{
+			case '+':						//evaluate Term and add
+				left += term ();
+				t = get_token ();
+				break;
 
-		case '-':						//read and evaluate an expression, then do a subtraction
-			return left - expression ();
+			case '-':						//evaluate Term and subtract
+				left -= term ();
+				t = get_token ();
+				break;
 
-		default:						//return the value of an expression
-			return left;
+			default:						//no more + or - return the answer;
+				return left;
+		}
 	}
 }
 
-												
+/*
+Term:
+	Primary
+	Term '*' Primary
+	Term '/' Primary
+*/
+
+double term ()
+{
+	double left = primary ();
+	Token t = get_token ();
+	while (true)
+	{
+		switch (t.kind)
+		{
+			case '*':
+				left *= primary ();
+				t = get_token ();
+				break;
+			
+			case '/':
+			{
+				double d = primary ();
+
+				if (d == 0)
+					error ("Divide by zero");
+
+				left /= d;
+				t = get_token ();
+				break;
+			}
+
+			default:
+				return left;
+
+		}
+	}
+}
+
+/*
+Primary:
+	Number 
+	'(' Expression ')'
+
+*/
+
+double Primary ()
+{
+	Token t = get_token ();
+	switch (t.kind)
+	{
+		case '(':									//handle '(' expression ')'
+		{
+			double d = expression ();
+			t = get_token ();
+			if (t.kind != ')')
+				error (" ')' expected");
+				return d;
+		}
+		case '8':									//Used 8 to represent number 
+			return t.value;							//return numbers value
+
+		default:
+			error ("primary expected");
+
+	}
+}
+
