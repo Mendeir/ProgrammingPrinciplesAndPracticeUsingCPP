@@ -92,7 +92,7 @@ double expression ()
 			default:						
 				ts.putback (t);			//put t back into the token stream
 				return left;			//no more + or - return the answer
-		}
+		} 
 	}
 }
 
