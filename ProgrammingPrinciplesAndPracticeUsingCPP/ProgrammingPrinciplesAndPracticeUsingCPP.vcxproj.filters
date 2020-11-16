@@ -19,7 +19,10 @@
     <None Include="Chapter05\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter06\Calculator1.0.cpp">
+    <ClCompile Include="Chapter06\Drill1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chapter06\Drill2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
