@@ -194,15 +194,18 @@ int main ()
 try
 {
     cout << "Welcome to our simple calculator. "
-         << "\nPlease enter expressions using floating - point numbers.";
+         << "\nAccepted operators are +, -, *, /, (, and )"
+         << "\nInput the character 'x' to quit and '=' to show the answer."
+         << "\nPlease enter expressions using floating - point numbers.\n\n";
+        
     double val = 0;
     while (cin) {
         Token t = ts.get ();
 
         if (t.kind == 'x')
             break; // 'q' for quit
-        if (t.kind == ';')        // ';' for "print now"
-            cout << "=" << val << '\n';
+        if (t.kind == '=')        // ';' for "print now"
+            cout <<  val << '\n';
         else
             ts.putback (t);
         val = expression ();
