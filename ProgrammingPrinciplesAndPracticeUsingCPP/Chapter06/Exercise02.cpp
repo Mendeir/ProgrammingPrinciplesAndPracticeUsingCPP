@@ -27,7 +27,6 @@ vector<Token> tok;
 //Functions to build grammar rules for an expression
 double expression ();		//deals with + and -   calls term() ang get_token() 
 double term ();				//deals with *, / and %	calls unique() and get_token()
-int unique ();			//deals with ! and calls primary() and get_token()
 double primary ();			//deals with number and parentheses	calls expression() and get_token()
 
 
@@ -37,7 +36,7 @@ int main ()
 	{
 		double val = 0;
 		cout << "Welcome to our simple calculator. "
-			<< "\nAccepted operators are +, -, *, /, (, and )"
+			<< "\nAccepted operators are +, -, *, /, ( , ) , { and }"
 			<< "\nInput the character 'x' to quit and '=' to show the answer."
 			<< "\nPlease enter expressions using floating - point numbers.\n\n";
 
@@ -113,7 +112,7 @@ Term:
 
 double term ()
 {
-	double left = unique ();
+	double left = primary ();
 	Token t = ts.get ();				//get the next token from the token stream
 	while (true)
 	{
@@ -141,20 +140,6 @@ double term ()
 				return left;
 		}
 	}
-}
-
-/*
-Unique:
-	Primary
-	Term '!' Primary
-
-*/
-
-int unique ()
-{
-	double left = primary ();
-	Token t = ts.get ();
-
 }
 
 /*
