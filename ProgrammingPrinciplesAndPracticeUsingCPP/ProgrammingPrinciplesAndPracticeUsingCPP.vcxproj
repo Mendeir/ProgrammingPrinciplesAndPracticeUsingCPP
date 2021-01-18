@@ -23,7 +23,7 @@
     <None Include="Chapter05\README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter06\Exercise02.cpp" />
+    <ClCompile Include="Chapter06\Exercise04.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
